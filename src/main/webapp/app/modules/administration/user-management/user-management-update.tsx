@@ -38,6 +38,8 @@ export const UserManagementUpdate = () => {
     } else {
       dispatch(updateUser(values));
     }
+    console.log(values);
+    console.log(user);
     handleClose();
   };
 

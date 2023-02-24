@@ -14,6 +14,7 @@ import PrivateRoute from 'app/shared/auth/private-route';
 import ErrorBoundaryRoutes from 'app/shared/error/error-boundary-routes';
 import PageNotFound from 'app/shared/error/page-not-found';
 import { AUTHORITIES } from 'app/config/constants';
+import { User } from 'app/modules/users/user';
 
 const loading = <div>loading ...</div>;
 
@@ -61,8 +62,10 @@ const AppRoutes = () => {
         <Route
           path="*"
           element={
-            <PrivateRoute hasAnyAuthorities={[AUTHORITIES.USER]}>
-              <EntitiesRoutes />
+            <PrivateRoute>
+              {/* <EntitiesRoutes /> */}
+              {/* <App /> */}
+              <User />
             </PrivateRoute>
           }
         />

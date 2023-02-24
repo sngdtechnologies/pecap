@@ -48,6 +48,7 @@ export const createUser = createAsyncThunk(
   async (user: IUser, thunkAPI) => {
     const result = await axios.post<IUser>(adminUrl, user);
     thunkAPI.dispatch(getUsersAsAdmin({}));
+    console.log('result', result);
     return result;
   },
   { serializeError: serializeAxiosError }

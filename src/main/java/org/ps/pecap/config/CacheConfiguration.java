@@ -48,6 +48,27 @@ public class CacheConfiguration {
             createCache(cm, org.ps.pecap.domain.User.class.getName());
             createCache(cm, org.ps.pecap.domain.Authority.class.getName());
             createCache(cm, org.ps.pecap.domain.User.class.getName() + ".authorities");
+            createCache(cm, org.ps.pecap.domain.Annee.class.getName());
+            createCache(cm, org.ps.pecap.domain.Annee.class.getName() + ".acces");
+            createCache(cm, org.ps.pecap.domain.Annee.class.getName() + ".etatProcedures");
+            createCache(cm, org.ps.pecap.domain.Annee.class.getName() + ".passports");
+            createCache(cm, org.ps.pecap.domain.Annee.class.getName() + ".profils");
+            createCache(cm, org.ps.pecap.domain.Annee.class.getName() + ".modePaiements");
+            createCache(cm, org.ps.pecap.domain.Annee.class.getName() + ".typePassports");
+            createCache(cm, org.ps.pecap.domain.Acces.class.getName());
+            createCache(cm, org.ps.pecap.domain.Acces.class.getName() + ".profils");
+            createCache(cm, org.ps.pecap.domain.Client.class.getName());
+            createCache(cm, org.ps.pecap.domain.Client.class.getName() + ".modePaiements");
+            createCache(cm, org.ps.pecap.domain.Client.class.getName() + ".etatProcedures");
+            createCache(cm, org.ps.pecap.domain.Profil.class.getName());
+            createCache(cm, org.ps.pecap.domain.Profil.class.getName() + ".acces");
+            createCache(cm, org.ps.pecap.domain.ModePaiement.class.getName());
+            createCache(cm, org.ps.pecap.domain.EtatProcedure.class.getName());
+            createCache(cm, org.ps.pecap.domain.Passport.class.getName());
+            createCache(cm, org.ps.pecap.domain.Passport.class.getName() + ".modePaiements");
+            createCache(cm, org.ps.pecap.domain.Passport.class.getName() + ".typePassports");
+            createCache(cm, org.ps.pecap.domain.TypePassport.class.getName());
+            createCache(cm, org.ps.pecap.domain.LogSystem.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
