@@ -24,8 +24,22 @@ const UserRoutes = () => {
   return (
     <div className="view-routes">
       <ErrorBoundaryRoutes>
-        <Route path="pre-enrole" element={<Start />} />
-        <Route path="connexion" element={<Connexion />} />
+        <Route
+          path="pre-enrole"
+          element={
+            <PrivateRoute hasAnyAuthorities={[AUTHORITIES.USER]}>
+              <Start />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="connexion"
+          element={
+            <PrivateRoute hasAnyAuthorities={[AUTHORITIES.USER]}>
+              <Connexion />
+            </PrivateRoute>
+          }
+        />
         <Route path="*" element={<PageNotFound />} />
         <Route path="annee/*" element={<Annee />} />
         <Route path="acces/*" element={<Acces />} />

@@ -1074,39 +1074,40 @@ export const Connexion = () => {
               <h5 id="type-procedure" className="mt-7">
                 <strong>Page de paiement</strong>
               </h5>
-              <h5 className="">Choisissez le mode de paiement</h5>
-            </div>
+              <h5 className="mb-8">Choisissez le mode de paiement</h5>
+              <strong>Informations du paiement</strong>
+              <h5 className="">
+                Nom du produit : <strong>Frais de passeport</strong>
+              </h5>
+              <h5 className="">
+                Montant : <strong>110 000 XAF</strong>
+              </h5>
 
-            <strong>Informations du paiement</strong>
-            <h5 className="">
-              Nom du produit : <strong>Frais de passeport</strong>
-            </h5>
-            <h5 className="">
-              Montant : <strong>110 000 XAF</strong>
-            </h5>
-
-            <div className="row justify-content-strech">
-              <div className="col-12 md:col-6">
-                <Image
-                  src="content/images/om.jpg"
-                  alt="Image"
-                  width={imageSelected == 'Orange money' ? '100' : '150'}
-                  className="img-fluid"
-                  onClick={() => {
-                    handleSetSelectedImage('Orange money');
-                  }}
-                />
-              </div>
-              <div className="col-12 md:col-6">
-                <Image
-                  src="content/images/momo.jpg"
-                  alt="Image"
-                  width={imageSelected == 'Mobile money' ? '100' : '150'}
-                  className="img-fluid"
-                  onClick={() => {
-                    handleSetSelectedImage('Mobile money');
-                  }}
-                />
+              <div className="row justify-content-strech">
+                <div className="col-12 md:col-6">
+                  <Image
+                    src="content/images/om.jpg"
+                    alt="Image"
+                    width={imageSelected == 'Orange money' ? '100' : '150'}
+                    className="img-fluid"
+                    id="om-img"
+                    onClick={() => {
+                      handleSetSelectedImage('Orange money');
+                    }}
+                  />
+                </div>
+                <div className="col-12 md:col-6">
+                  <Image
+                    src="content/images/momo.jpg"
+                    alt="Image"
+                    width={imageSelected == 'Mobile money' ? '100' : '150'}
+                    className="img-fluid"
+                    id="momo-img"
+                    onClick={() => {
+                      handleSetSelectedImage('Mobile money');
+                    }}
+                  />
+                </div>
               </div>
             </div>
 
@@ -1139,28 +1140,27 @@ export const Connexion = () => {
                   setTelephone(e.target.value);
                 }}
               />
-            </div>
-
-            <div className="flex flex-wrap gap-7 mt-3">
-              <Button
-                color="default"
-                data-cy="entityCreateSaveButton"
-                onClick={() => {
-                  goOnPage(1);
-                }}
-              >
-                Annuler
-              </Button>
-              &nbsp;
-              <Button
-                color="primary"
-                data-cy="entityCreateSaveButton"
-                onClick={() => {
-                  handleSavePage5();
-                }}
-              >
-                Payer
-              </Button>
+              <div className="flex flex-wrap gap-7 mt-3">
+                <Button
+                  color="default"
+                  data-cy="entityCreateSaveButton"
+                  onClick={() => {
+                    goOnPage(1);
+                  }}
+                >
+                  Annuler
+                </Button>
+                &nbsp;
+                <Button
+                  color="primary"
+                  data-cy="entityCreateSaveButton"
+                  onClick={() => {
+                    handleSavePage5();
+                  }}
+                >
+                  Payer
+                </Button>
+              </div>
             </div>
           </div>
         )}
